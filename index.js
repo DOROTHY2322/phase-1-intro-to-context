@@ -1,5 +1,5 @@
 // Your code here
-let createEmployeeRecord = function(row){
+function createEmployeeRecord(row){
     return {
         firstName: row[0],
         familyName: row[1],
@@ -10,11 +10,12 @@ let createEmployeeRecord = function(row){
     }
 }
 
-let createEmployeeRecords = function(employeeRowData) {
+function createEmployeeRecords(employeeRowData){
     return employeeRowData.map(function(row){
         return createEmployeeRecord(row)
     })
 }
+
 
 let createTimeInEvent = function(employee, dateStamp){
     let [date, hour] = dateStamp.split(' ')
